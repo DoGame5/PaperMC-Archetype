@@ -1,53 +1,75 @@
-PaperMC - Archetype [![](https://jitpack.io/v/DoGame5/PaperMC-Archetype.svg)](https://jitpack.io/#DoGame5/PaperMC-Archetype)
-===========
-This is a simple Archetype made for programming plugins for Minecraft using PaperMC
+# PaperMC-Archetype [![JitPack](https://jitpack.io/v/DoGame5/PaperMC-Archetype.svg)](https://jitpack.io/#DoGame5/PaperMC-Archetype)
 
-How To (Plugin Developers)
-------
-#### Repository (for papermc-archetype)
-##### Maven
+Ein Maven Archetype zur schnellen Erstellung von Minecraft Paper Plugins – optimiert für **Paper 1.20.4**.
 
-```xml
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+> Spare dir die immer gleiche Setup-Arbeit und erstelle in Sekunden ein fertiges Plugin-Grundgerüst!
+
+---
+
+## 🚀 Schnellstart
+
+### 📦 Neues Plugin-Projekt generieren:
+
+```bash
+mvn archetype:generate \
+  -DarchetypeGroupId=com.github.DoGame5 \
+  -DarchetypeArtifactId=PaperMC-Archetype \
+  -DarchetypeVersion=PaperMC-1.20.4 \
+  -DarchetypeRepository=https://jitpack.io \
+  -DgroupId=me.deinname \
+  -DartifactId=meinplugin \
+  -Dversion=1.0-SNAPSHOT \
+  -Dpackage=me.deinname.plugin \
+  -DinteractiveMode=false
+````
+
+> 🔁 Du kannst `groupId`, `artifactId` und `package` an deine Bedürfnisse anpassen.
+
+---
+
+## 📁 Struktur des generierten Projekts
+
+```text
+meinplugin/
+├── pom.xml
+├── src/
+│   ├── main/
+│   │   ├── java/me/deinname/plugin/Main.java
+│   │   └── resources/plugin.yml
+└── ...
 ```
 
-```xml
-	<dependency>
-	    <groupId>com.github.DoGame5</groupId>
-	    <artifactId>PaperMC-Archetype</artifactId>
-	    <version>PaperMC-1.20.4</version>
-	</dependency>
-```
-##### Gradle (settings.gradle)
-```kotlin
-	dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url 'https://jitpack.io' }
-		}
-	}
+---
 
-	dependencies {
-	        implementation 'com.github.DoGame5:PaperMC-Archetype:PaperMC-1.20.4'
-	}
-```
-##### Gradle (settings.gradle.kts)
-```kotlin
-	dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-		repositories {
-			mavenCentral()
-			maven { url = uri("https://jitpack.io") }
-		}
-	}
+## 🧪 Voraussetzungen
 
-	dependencies {
-	        implementation("com.github.DoGame5:PaperMC-Archetype:PaperMC-1.20.4")
-	}
-```
+* Java 17+ (empfohlen)
+* Maven 3.6.3+
+* PaperMC Server (ab 1.20.4)
+
+---
+
+## 🧰 Entwickler-Info
+
+Dieser Archetype nutzt:
+
+* `maven-archetype-plugin`
+* eine saubere, minimalistische Plugin-Struktur
+* modernes Paper Plugin Setup
+
+---
+
+## 🏷 Lizenz
+
+MIT License – nutzbar für Open Source und kommerzielle Projekte.
+
+---
+
+## 🙌 Mitmachen?
+
+Pull Requests sind willkommen!
+Wenn du Vorschläge für weitere Platzhalter, APIs oder Verbesserungen hast, schreib gerne ein Issue oder öffne einen PR.
+
+---
+
+> Entwickelt mit ❤️ von [@DoGame5](https://github.com/DoGame5)
